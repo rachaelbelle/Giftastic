@@ -1,0 +1,28 @@
+body{
+  background: url("../images/uncleKarl.jpg");
+  background-size: 100%;
+}
+
+.jumbotron{
+  background-color: rgba(200, 205, 206, 0.331);
+}
+
+
+#headline{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px #7e7373af;
+  color: white;
+}
+
+#form-header{
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px #7e7373af;
+  color: white;
+
+}
+
+.btn{
+  margin-right: 10px;
+  margin-bottom: 10px;
+};

@@ -1,98 +1,103 @@
-var topics = ["karl lagerfeld", "coco chanel", "christian louboutin", "yves saint laurent", "christian dior", "alexander mcqueen", "andre leon talley", "anna wintour", "gianni versace", "stella mccartney", "john galliano",];
+var topics = ["karl lagerfeld", "coco chanel", "christian louboutin", "yves saint laurent", "christian dior", "alexander mcqueen", "anna wintour", "andre leon talley", "gianni versace", "stella mccartney", "john galliano",];
 
-  var fashionista;
+var fashionista;
 
-  function createButtons() {
-    $("#buttons").empty();
-    for (var i = 0; i < topics.length; i++) {
-      var addButton = $("<button>");
-      //addButton.addClass("topics");
-      addButton.attr("data-person", topics[i]);
-      addButton.text(topics[i]);
-      $("#buttons").append(addButton);
-      console.log(addButton)
-    }
+function createButtons() {
+  $("#buttons").empty();
+  for (var i = 0; i < topics.length; i++) {
+    var addButton = $("<button class='btn btn-secondary designerBtn'>");
+    //addButton.addClass("topics");
+    addButton.attr("data-person", topics[i]);
+    addButton.text(topics[i]);
+    $("#buttons").append(addButton);
+    console.log(addButton)
   }
+}
 
-$(document).ready(function() {
+$("#submit").on("click", function () {
+  console.log($("#submit"))
+  var myNewFashionista = $("#addFashionista").val().trim()
+  topics.push(myNewFashionista)
+  createButtons()
+
+})
+
+$(document).ready(function () {
 
   createButtons();
 
-  $("button").on("click", function() {
+
+  $(document).on("click", ".designerBtn", function(event) {
+    event.preventDefault()
     fashionista = $(this).attr("data-person");
-      console.log(this)
+    console.log("fashonista ", fashionista)
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       fashionista + "&api_key=6fm3CsPIAvOTSTPUGVp7PvO66HQRmwyX&limit=10";
 
-      $.ajax({
+    $.ajax({
       url: queryURL,
       method: "GET"
     })
 
-    .then(function(response) {
+      .then(function (response) {
 
-      var results = response.data;
+        var results = response.data;
 
-      for (var i = 0; i < results.length; i++) {
-        console.log("api" + JSON.stringify(results[i]))
-       console.log("*******************")
-      var gifDiv = $("<div>");
-      var rating = results[i].rating;
-      var p = $("<p>").text("Rating: " + rating);
+        for (var i = 0; i < results.length; i++) {
+          console.log("api" + JSON.stringify(results[i]))
+          console.log("*******************")
+          var gifDiv = $("<div class='col-md-4'>");
+          var rating = results[i].rating;
+          var p = $("<p>").text("Rating: " + rating);
 
-      var personImage = $("<img>");
-      personImage.attr("src", results[i].images.fixed_height.url);
-      console.log(personImage)
+          var personImage = $("<img class='gif'>");
+          personImage.attr("src", results[i].images.fixed_height_still.url);
+          console.log(personImage)
 
-      gifDiv.prepend(p);
-      gifDiv.prepend(personImage);
+          gifDiv.prepend(p);
+          gifDiv.prepend(personImage);
 
-      $("#gifs-appear-here").prepend(gifDiv);
-      console.log(gifDiv)
+          $("#gifs-appear-here").prepend(gifDiv);
+          console.log(gifDiv)
 
-      var stillImage = results[i].still_image;
-      var animatedImage = results[i].url;
-      //var initialState = "animated";
-      //var newImg = $("<img>");
-      personImage.attr("data-still", stillImage);
-      personImage.attr("data-amimate", animatedImage);
-      //newImg.attr("data-state", initialState);
-      //newImg.attr("src", animatedImage);
-     }
+          var stillImage = results[i].images.fixed_height_still.url;
+          var animatedImage = results[i].images.fixed_height.url;
+          //var initialState = "animated";
+          //var newImg = $("<img>");
+          personImage.attr("data-still", stillImage);
+          personImage.attr("data-animate", animatedImage);
+          //personImage.attr("data-state", "still");
 
-
- $(".gif").on("click", function() {
-  var state = $(this).attr("data-state");
-
- // If the clicked image's state is still, update its src attribute to what its data-animate value is.
- // Then, set the image's data-state to animate
- // Else set src to the data-still value
- if (state === "still") {
-   $(this).attr("src", $(this).attr("data-animate"));
-   $(this).attr("data-state", "animate");
-   console.log(this)
- } else {
-   $(this).attr("src", $(this).attr("data-still"));
-   $(this).attr("data-state", "still");
- }
-});
+          //newImg.attr("data-state", initialState);
+          //newImg.attr("src", animatedImage);
+        }
 
 
+        $(".gif").on("click", function () {
+          console.log("clicked gif");
+
+          var sourceUrl = $(this).attr("src")
+          var stillUrl = $(this).attr("data-still")
+          var animatedUrl = $(this).attr("data-animate")
 
 
-      //buttons
-      //var buttonsDiv = $("<div>");
+          console.log("My source is: " + sourceUrl);
+          console.log("My still string is: " + stillUrl);
+          console.log("My animated string is: " + animatedUrl);
 
-      //var gifButtons = $("<button>");
-     // var person = results[i].person;
-      //gifButtons.attr("data-person", results[i].person);
+          if (sourceUrl === stillUrl) {
+            console.log("My source is equal to the still url");
+            $(this).attr("src", animatedUrl)
+          } else {
+            console.log("My source is NOT equal to the still url");
+            $(this).attr("src", stillUrl)
+          }
 
-     // var personArray = ["parker posey", "steve zahn", "ethan hawk", "ally sheedy"]
+        });
 
-     // buttonsDiv.append(gifButtons);
 
-    });
+      });
 
- });
+  });
 })

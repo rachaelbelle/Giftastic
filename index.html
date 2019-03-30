@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GifTastic</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
 </head>
-  <link rel="stylesheet" href="assets/css/style.css"></link>
+<link rel="stylesheet" href="assets/css/style.css">
+</link>
+
 <body>
+  <div class="container">
+    <h2 id="headline">You are not a special or unique snowflake</h2>
+    <div class="jumbotron" id="jumbo">
 
-  <div id="buttons">
+      <div id="buttons">
+      </div>
+      <div class=row>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4" id="gif-form">
+          <h5 id="form-header">Input a new Fashionista</h5>
+          <input type="input" id="addFashionista">
+          <button class='btn btn-secondary' id="submit">Fashionista</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row" id="gifs-appear-here">
+    </div>
 
   </div>
-
-
-  <div id="gifs-appear-here">
-  </div>
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
-    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 -->
-    <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
+
 </html>
