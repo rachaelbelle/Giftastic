@@ -8,7 +8,7 @@ With the help and support of the GIPHY API, created a sassy and dynamic web page
 
 Clicks on a button naming a designer or fashion mogul.  The page will grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
 
-Clicks one of the still GIPHY images.  Surprise! 😳 The gif animates. Clicks the gif again, it will stop playing.
+Clicks one of the still GIPHY images.  Surprise! 😳 The gif animates. Click the gif again, it will stop playing.
 
 Under every gif, is a display OF its rating. 
    * Gotta be sure we aren't NSFW!
