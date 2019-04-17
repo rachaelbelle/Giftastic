@@ -1,12 +1,12 @@
-# # GifTastic
+# GifTastic: Fashionistas
 
 ### Overview
 
-In this assignment, you'll use the GIPHY API to make a dynamic web page that populates with gifs of your choice. To finish this task, you must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
+Using the GIPHY API: make a dynamic web page that populates with gifs of your choice. You must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
 
 ![GIPHY](Images/1-giphy.jpg)
 
-### Before You Begin
+### Process
 
 1. **Hit the GIPHY API**.
    * Fool around with the GIPHY API. [Giphy API](https://developers.giphy.com/docs/).
