@@ -1,29 +1,10 @@
 # GifTastic: Fashionistas
 
-### Overview
+### Welcome.
 
-Using the GIPHY API: make a dynamic web page that populates with gifs of your choice. You must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
+With the help and support of the GIPHY API, created a sassy and dynamic web page that populates with fabulous fashionistas. Called upon the GIPHY API and used JavaScript and jQuery to dynamically change the HTML of the site.
 
-![GIPHY](Images/1-giphy.jpg)
-
-### Process
-
-1. **Hit the GIPHY API**.
-   * Fool around with the GIPHY API. [Giphy API](https://developers.giphy.com/docs/).
-   * Be sure to read about these GIPHY parameters (hint, hint):
-     * `q`
-     * `limit`
-     * `rating`
-   * Like many APIs, GIPHY requires developers to use a key to access their API data. To use the GIPHY API, you'll need a GIPHY account (don't worry, it's free!) and then obtain an API Key by [creating an app](https://developers.giphy.com/dashboard/?create=true).
-   * Make sure you switch the protocol in the query URL from **`http to https`**, or the app may not work properly when deployed to Github Pages.
-
-2. **[Watch the demo video](https://youtu.be/BqreERTLjgQ)**
-
-   * You should have a high-level understanding of how this assignment works before attempting to code it.
-
-### Submission on BCS
-
-* Please submit both the deployed Github.io link to your homework AND the link to the Github Repository!
+![gifTasticKarl](/images/gifTasticKarl.png)
 
 ### Instructions
 
@@ -85,11 +66,3 @@ Add a `README.md` to your repository describing the project. Here are some resou
 ### Add To Your Portfolio
 
 After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.
-
-- - -
-
-### One More Thing
-
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
-
-**Good Luck!**
