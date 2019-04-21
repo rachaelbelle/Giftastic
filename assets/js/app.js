@@ -18,6 +18,7 @@ $("#submit").on("click", function () {
   console.log($("#submit"))
   var myNewFashionista = $("#addFashionista").val().trim()
   topics.push(myNewFashionista)
+  $("#addFashionista").val("") // clear input value
   createButtons()
 
 })
