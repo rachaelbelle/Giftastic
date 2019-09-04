@@ -10,10 +10,19 @@ Clicks on a button naming a designer or fashion mogul.  The page will grab 10 st
 
 Clicks one of the still GIPHY images.  Surprise! 😳 The gif animates. Click the gif again, it will stop playing.
 
-Under every gif, is a display OF its rating. 
+Under every gif, is a display of its rating.
    * Gotta be sure we aren't NSFW!
-   
+
 Once tired with provided Fashionistas, please feel free to add one of your choosing by entering a new name in the search area.
-   *  Button will append as well as a new selection of 10 gifs.
+   *  Button will append, click new button and a new selection of 10 gifs.
+
+### Uncle Karl
+
+<kbd>
+  <img src="assets/images/Karl.png" />
+</kbd>
 
 
+<kbd>
+  <img src="assets/images/chanel.png" />
+</kbd>
